@@ -1,0 +1,14 @@
+{
+    "name": "snayder/user-directory",
+    "description": "Directorio de usuarios",
+    "authors": [
+        {
+            "name": "Snayder Acero",
+            "email": "helacer3@yahoo.es"
+        }
+    ],
+    "require": {
+        "twig/twig": "^3.0",
+        "illuminate/database": "^7.25"
+    }
+}
