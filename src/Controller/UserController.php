@@ -1,7 +1,14 @@
 <?php
 namespace Controller;
 
-include_once 'Controller\Base\BaseController.php';
+include_once 'src\Controller\Base\BaseController.php';
+// bl
+include_once 'src\BL\UserBL.php';
+include_once 'src\BL\CustomerDataBL.php';
+
+use Controller\Base\BaseController; 
+use BL\UserBL;
+use BL\CustomerDataBL;
 
 /**
 * user Controller Class
@@ -17,11 +24,9 @@ class UserController extends BaseController {
 	/**
 	* construct
 	*/
-	public function __construct($clsValidate, $cstService, $usrService, $twig) {
+	public function __construct($clsValidate, $twig) {
 		$this->twig        = $twig;
 		$this->clsValidate = $clsValidate;
-		$this->cstService  = $cstService;
-		$this->usrService  = $usrService;
 		$this->basePath    = $_SERVER['HTTP_HOST'].$_SERVER['PHP_SELF'];
 	}
 		
@@ -58,10 +63,12 @@ class UserController extends BaseController {
 			'usrEmail'    => $_POST['usr_email'],
 			'usrPassword' => $_POST['usr_password']
 		);
+		// instace User BL
+		$blUser = new UserBL();
 		// login User Validate 
-		if ($this->usrService->loginUserValidate($usrData) > 0) {
+		if ($blUser->loginUserValidate($usrData) > 0) {
 			// set User Session
-			$this->usrService->setUserSession($usrData['usrEmail']);
+			$blUser->setUserSession($usrData['usrEmail']);
 			// default Redirect
 			header("Location: http://".$this->basePath);
 		}
@@ -87,10 +94,14 @@ class UserController extends BaseController {
 		$datValidate = $this->clsValidate->registerValidate($usrData);
 		// data Validate
 		if ($datValidate['status'] == "OK") {
+			// instace User BL
+			$blUser = new UserBL();
+			// instance Customer Data BL
+			$blCustomerData = new CustomerDataBL();
 			// call Customer Service Data Validation
-			$this->cstService->validateUserDocument($usrData['usrDocument']);
+			$blCustomerData->validateUserDocument($usrData['usrDocument']);
 			// create User Validate
-			if ($this->usrService->createUser($usrData)) {
+			if ($blUser->createUser($usrData)) {
 				// redirect To Home
 				header("Location: http://".$this->basePath."?page=login");
 			} else {

@@ -1,15 +1,19 @@
 <?php
 namespace Controller;
 
-include_once 'Controller\Base\BaseController.php';
+include_once 'src\Controller\Base\BaseController.php';
 // bl
-include_once 'BL\UserBL.php';
-include_once 'BL\CountriesBL.php';
+include_once 'src\BL\UserBL.php';
+include_once 'src\BL\CountriesBL.php';
+
+use Controller\Base\BaseController;
+use BL\UserBL;
+use BL\CountriesBL;
 
 /**
 * principal Controller Class
 */
-class IndexController extends BaseController {
+class IndexController {
 
 	// class Vars
 	protected $twig;

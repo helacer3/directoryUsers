@@ -9,6 +9,7 @@ class CustomerDataBL {
 	public function __construct() {
 
 	} 
+	
 	/**
 	*  validateUserDocument
 	*/

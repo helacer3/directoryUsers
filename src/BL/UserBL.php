@@ -1,7 +1,7 @@
 <?php
 namespace BL;
 
-include_once 'Model\User.php';
+include_once 'src\Model\User.php';
 
 use Model\User;
 

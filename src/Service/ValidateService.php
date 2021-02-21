@@ -1,6 +1,8 @@
 <?php
 namespace Service;
 
+include_once 'src\BL\UserBL.php';
+
 use BL\UserBL;
 
 /**

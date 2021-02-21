@@ -10,6 +10,7 @@ class BaseAjaxController {
 	* construct
 	*/
 	public function __construct() {
+		
 		$reqAction  = $_POST['action'];
 		$this->{$reqAction}();
 	}
@@ -17,7 +18,7 @@ class BaseAjaxController {
 	/**
 	* generic Response
 	*/
-	public genericResponseJson(array $arrResponse) {
+	public function genericResponseJson(array $arrResponse) {
 		return json_encode($arrResponse);
 	}
 }

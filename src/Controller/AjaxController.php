@@ -1,10 +1,12 @@
 <?php
 namespace Controller;
 
-include_once 'Controller\Base\BaseAjaxController.php';
-include_once 'BL\UserBL.php';
+include_once 'src\Controller\Base\BaseAjaxController.php';
+include_once 'src\BL\UserBL.php';
 
-use Service\UserService;
+use Controller\Base\BaseAjaxController;
+use BL\UserBL;
+
 /**
 * Ajax Controller Class
 */
