@@ -2,7 +2,7 @@
 namespace Controller\Base;
 
 /**
-* Bse Ajax Controller Class
+* Base Ajax Controller Class
 */
 class BaseAjaxController {
 	
