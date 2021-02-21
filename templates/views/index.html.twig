@@ -1,0 +1,33 @@
+{% extends "layout.html.twig" %}
+
+{% block title %}Home - Directorio de Usuarios{% endblock %}
+{% block head %}
+    {{ parent() }}
+{% endblock %}
+{% block body %}
+	<div class="row">
+		{% if (session.user is defined) %}
+			<div class="col-12">
+				Búsqueda de usuarios por nombre o correo electrónico:
+				<form>
+					<input type="text" name="usr_value" id="usr_value" placeholder="Favor, digite el documento o correo electrónico del usuario" size="80" class="pl-1">
+					<button id="btn_fnduser" class="btn-success">Buscar usuario</button>
+				</form>
+			</div>
+			<div id="cnt_userinfo" class="col-12 d-none">
+				<b>Nombre: </b> <div id="usr_name"></div><br />
+				<b>Correo: </b> <div id="usr_email"></div><br />
+				<b>Documento: </b> <div id="usr_document"></div><br />
+				<b>Código o Nombre Pais: </b> <div id="usr_country"></div><br />
+			</div>
+		{% else %}
+			<div class="offset-md-2 col-8 alert alert-danger">
+				Favor identifíquese, para poder acceder al directorio de usuarios!
+			</div>
+		{% endif %}
+	</div>
+	{% block javascripts %}
+   		{{ parent() }}
+    	<script src="./assets/js/script.js"></script>
+	{% endblock %}
+{% endblock %}
