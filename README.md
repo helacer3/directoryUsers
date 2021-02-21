@@ -1,8 +1,11 @@
-# User Directory PHP
+# Directorio de Usuarios PHP 7.4
 
-_ Directorio de usuarios, desarrollado con PHP7, haciendo uso de twig como motor de plantillas y Eloquent como ORM para persistir la información de los usuarios en MySQL
+_ Directorio de usuarios, desarrollado con PHP7
 
-_ Validaciones de formulario de lado del servidor (PHP)  
+- Motor de plantillas: Twig
+- ORM: Eloquent 
+- BaseDeDatos: MySQL
+- Gestor de Dependencias: composer 
 
 ### Instalación 🔧
 
