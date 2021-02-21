@@ -77,14 +77,14 @@ class __TwigTemplate_30ad701a8de54db4184df4d25f933102ff8a01364f3bbb9e563acc1af6a
 \t\t\t\tBúsqueda de usuarios por nombre o correo electrónico:
 \t\t\t\t<form>
 \t\t\t\t\t<input type=\"text\" name=\"usr_value\" id=\"usr_value\" placeholder=\"Favor, digite el documento o correo electrónico del usuario\" size=\"80\" class=\"pl-1\">
-\t\t\t\t\t<button id=\"btn_fnduser\" class=\"btn-success\">Buscar usario</button>
+\t\t\t\t\t<button id=\"btn_fnduser\" class=\"btn-success\">Buscar usuario</button>
 \t\t\t\t</form>
 \t\t\t</div>
 \t\t\t<div id=\"cnt_userinfo\" class=\"col-12 d-none\">
 \t\t\t\t<b>Nombre: </b> <div id=\"usr_name\"></div><br />
 \t\t\t\t<b>Correo: </b> <div id=\"usr_email\"></div><br />
 \t\t\t\t<b>Documento: </b> <div id=\"usr_document\"></div><br />
-\t\t\t\t<b>Código Pais: </b> <div id=\"usr_country\"></div><br />
+\t\t\t\t<b>Código o Nombre Pais: </b> <div id=\"usr_country\"></div><br />
 \t\t\t</div>
 \t\t";
         } else {
@@ -108,7 +108,7 @@ class __TwigTemplate_30ad701a8de54db4184df4d25f933102ff8a01364f3bbb9e563acc1af6a
         echo "   \t\t";
         $this->displayParentBlock("javascripts", $context, $blocks);
         echo "
-    \t<script src=\"./assets/js/scriptusers.js\"></script>
+    \t<script src=\"./assets/js/script.js\"></script>
 \t";
     }
 
@@ -142,14 +142,14 @@ class __TwigTemplate_30ad701a8de54db4184df4d25f933102ff8a01364f3bbb9e563acc1af6a
 \t\t\t\tBúsqueda de usuarios por nombre o correo electrónico:
 \t\t\t\t<form>
 \t\t\t\t\t<input type=\"text\" name=\"usr_value\" id=\"usr_value\" placeholder=\"Favor, digite el documento o correo electrónico del usuario\" size=\"80\" class=\"pl-1\">
-\t\t\t\t\t<button id=\"btn_fnduser\" class=\"btn-success\">Buscar usario</button>
+\t\t\t\t\t<button id=\"btn_fnduser\" class=\"btn-success\">Buscar usuario</button>
 \t\t\t\t</form>
 \t\t\t</div>
 \t\t\t<div id=\"cnt_userinfo\" class=\"col-12 d-none\">
 \t\t\t\t<b>Nombre: </b> <div id=\"usr_name\"></div><br />
 \t\t\t\t<b>Correo: </b> <div id=\"usr_email\"></div><br />
 \t\t\t\t<b>Documento: </b> <div id=\"usr_document\"></div><br />
-\t\t\t\t<b>Código Pais: </b> <div id=\"usr_country\"></div><br />
+\t\t\t\t<b>Código o Nombre Pais: </b> <div id=\"usr_country\"></div><br />
 \t\t\t</div>
 \t\t{% else %}
 \t\t\t<div class=\"offset-md-2 col-8 alert alert-danger\">
@@ -159,7 +159,7 @@ class __TwigTemplate_30ad701a8de54db4184df4d25f933102ff8a01364f3bbb9e563acc1af6a
 \t</div>
 \t{% block javascripts %}
    \t\t{{ parent() }}
-    \t<script src=\"./assets/js/scriptusers.js\"></script>
+    \t<script src=\"./assets/js/script.js\"></script>
 \t{% endblock %}
 {% endblock %}", "index.html.twig", "C:\\xampp\\htdocs\\pruebas\\prbZinobe\\templates\\views\\index.html.twig");
     }

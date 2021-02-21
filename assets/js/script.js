@@ -21,11 +21,12 @@ $(function() {
 			    success:function(response){
 			    	// validate Response
 			    	if (response.status == "OK" && response.data != null) {
+			    		// console.log(response.data);
 				    	$("#usr_name").html(response.data.name);
 				    	$("#usr_email").html(response.data.email);
 				    	$("#usr_document").html(response.data.document);
 				    	$("#usr_country").html(response.data.country_code);
-				    	$("#cnt_userinfo").toggleClass('d-none');
+				    	$("#cnt_userinfo").removeClass('d-none');
 			        } else {
 			        	alert("El usuario no existe en el sistema");
 			        }

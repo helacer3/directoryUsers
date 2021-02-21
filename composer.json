@@ -9,6 +9,7 @@
     ],
     "require": {
         "twig/twig": "^3.0",
-        "illuminate/database": "^7.25"
+        "illuminate/database": "^7.25",
+        "tcdent/php-restclient": "^0.1.7"
     }
 }

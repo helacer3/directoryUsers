@@ -73,7 +73,7 @@ class UserController extends BaseController {
 			header("Location: http://".$this->basePath);
 		}
 		// default Redirect
-		header("Location: http://".$this->basePath."?page=login");
+		header("Location: http://".$this->basePath."?page=index");
 	}
 
 	/**

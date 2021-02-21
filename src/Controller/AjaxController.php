@@ -5,7 +5,7 @@ include_once 'src\Controller\Base\BaseAjaxController.php';
 include_once 'src\BL\UserBL.php';
 
 use Controller\Base\BaseAjaxController;
-use BL\UserBL;
+use BL\CustomerDataBL;
 
 /**
 * Ajax Controller Class
@@ -28,12 +28,12 @@ class AjaxController extends BaseAjaxController {
 		// default Var
 		$arrResponse = array('status' => 'OK', 'data' => null);
 		try {
-			// load User BL
-			$usrBL    = new UserBL();
+			// load Customer User BL
+			$customerBL = new CustomerDataBL();
 			// request User Value
-			$usrValue = $_POST['usrValue'];
+			$usrValue   = $_POST['usrValue'];
 			// find User Data
-			$usrData  = $usrBL->findUserData($usrValue);
+			$usrData    = $customerBL->validateUserData($usrValue);
 			// echo "<pre>"; print_r($usrData); echo "</pre>"; die;
 			// validate Response
 			if ($usrData != null) {
